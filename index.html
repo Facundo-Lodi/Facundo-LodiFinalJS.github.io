@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <title>Facundo Lodi JS</title>
+  <link rel="icon" href="img/icono.png"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+<body>
+  <div id="mostrar-contenido" style="display: block;">
+    <button id="mostrar-btn">Iniciar</button>
+  </div>
+
+  <div class="container" style="display: none;">
+    <header>
+      <a href="#" class="logo"> Facundo Lodi </a>
+      <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+      </ul>
+    </header>
+
+    <h1>Lista de personas</h1>
+    <div>
+      <button id="agregar-btn">Agregar persona</button>
+      <button id="buscar-btn">Buscar persona</button>
+      <button id="filtrar-btn">Filtrar personas</button>
+      <button id="toggle-listado-btn">Mostrar/Ocultar listado</button>
+      <button id="mostrar-todas-btn">Listado completo</button>
+
+
+    </div>
+
+    <div id="agregar-form" style="display: none;">
+      <h2>Agregar persona</h2>
+      <form id="agregar-formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
+        <button type="submit">Agregar</button>
+      </form>
+    </div>
+
+    <div id="buscar-form" style="display: none;">
+      <h2>Buscar persona</h2>
+      <form id="buscar-formulario">
+        <label for="nombreBuscado">Nombre a buscar:</label>
+        <input type="text" id="nombreBuscado" required>
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+
+    <div id="filtrar-form" style="display: none;">
+      <h2>Filtrar personas</h2>
+      <form id="filtrar-formulario">
+        <label for="edadMinima">Edad mínima:</label>
+        <input type="number" id="edadMinima" required>
+        <button type="submit">Filtrar</button>
+      </form>
+
+    </div> 
+
+    <div id="mensaje"></div>
+    <div id="resultado"></div>
+    <button id="ordenar-btn">Ordenar alfabéticamente</button>
+    <button id="ordenar-por-edad-baja">Ordenar por edad baja</button>
+    <button id="ordenar-por-edad-alta">Ordenar por edad alta</button>
+    <button id="eliminar-todas-personas-btn">Eliminar todas las personas</button>
+
+    <div id="reloj" class="reloj-container">
+      <span id="hora">00</span> :
+      <span id="minutos">00</span> :
+      <span id="segundos">00</span>
+    </div>
+
+    <button id="eliminar-persona-btn">🗑️</button>
+    <div id="listado-eliminados" style="display: none;">
+      <ul id="lista-eliminados"></ul>
+      <button id="restaurar-seleccionado-btn">Restaurar persona</button>
+      <button id="cerrar-listado-btn">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
